@@ -1,0 +1,58 @@
+/* Keep one control per resource category, with links grouped by release. */
+.publication-links.resource-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: .65rem;
+  max-width: none;
+}
+.resource-nav .button,
+.resource-nav .resource-link {
+  margin: 0;
+}
+.resource-nav .resource-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  min-height: 45px;
+  padding: .65rem 1rem;
+  color: #344257;
+  background: #fff;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.resource-nav .resource-group.is-dark {
+  color: #fff;
+  background: #363636;
+  border-color: #363636;
+  border-radius: 9999px;
+  font-size: 1rem;
+}
+.resource-nav .resource-group svg {
+  width: 18px;
+  height: 18px;
+}
+.resource-nav .resource-group a {
+  color: inherit;
+  border-inline-start: 1px solid currentColor;
+  padding-inline-start: .5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.resource-nav .resource-group a:hover {
+  opacity: .8;
+}
+.resource-nav .resource-group a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+@media screen and (max-width: 768px) {
+  .resource-nav > .resource-group {
+    flex: 1 1 100%;
+  }
+}
